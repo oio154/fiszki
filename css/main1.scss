@@ -3,25 +3,63 @@
 
 
 $bg1: #eee;
+$menucolor: #efefef;
+$menubg: #444;
 
-
-
+*{box-sizing: border-box;}
 body{ background: $bg1; 
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
+    
     height: 100%;    
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
 }
 
 
 
 .menu{ 
-    background: #666; 
-    color: red;
+    background: $menubg; 
+    color: $menucolor;
     width: 40%;
     max-width: 300px;
     height: 100%;
+    h2{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    overflow: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-right: .2rem;
+    
+    label{
+        width: 100%; 
+        display: inline-block;
+        position: relative;
+        //border: 1px solid red;
+        padding-left: 2rem;
+        //margin-top: .6rem;
+        border-top: 1px solid darken($menucolor,50%);
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+        &:hover {background: lighten($menubg, 10%); transition: background-color .3s ease-in-out; }
+        input{
+            position: absolute;
+            left: 0;
+            top: .3rem;
+            width: 1rem;
+            height: 1rem;
+            margin: 0 0 0 .2rem;
+        }
+    }
 }
 
 

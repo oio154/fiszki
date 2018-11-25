@@ -43,13 +43,13 @@ function populateMenu(words){
         node.type="checkbox";
         node.id=id;
         node.name=element;
-        document.querySelector(".menu").appendChild(node);
+        //document.querySelector(".menu").appendChild(node);
 
         //label
         label.htmlFor=id;
         label.appendChild(document.createTextNode(element));
-        document.querySelector(".menu").appendChild(label);
-
+        l2=document.querySelector(".menu").appendChild(label);
+        l2.appendChild(node);
     });
 
 }
